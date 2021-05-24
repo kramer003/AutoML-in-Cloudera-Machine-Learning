@@ -24,7 +24,9 @@ The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Mach
 
 The Python variable `aml` contains the leaderboard of all models built, and their respective results. In this case the best model is a Stacked Ensemble.
 
-```aml.leaderboard```
+```
+aml.leaderboard
+```
 ![data](images/leaderboard.png)
 
 At the end of the script, we use `h2o.save_model` to save the state of our Stacked Ensemble model, and use it to generate predictions on new data.
@@ -40,4 +42,4 @@ The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloude
 The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py)
 
 ### 4. Conclusion
-This quick guide helps you get up and running with autoML in CML. If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**
+This quick guide helps you get up and running with autoML in CML. If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
