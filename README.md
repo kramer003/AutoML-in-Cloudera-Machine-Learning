@@ -13,7 +13,7 @@ In this case, we perform One Hot Encoding to convert character variables to thei
 
 AutoML libraries, such as **[H2O](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html)** and **[auto-sklearn](https://automl.github.io/auto-sklearn/master/)**, allowing you to simply define your target and predictor variables, and takes care of the rest on the back end.
 
-### 1. Install Dependencies
+### 0. Install Dependencies
 The [`requirements.txt`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/requirements.txt) file installs dependencies to your CML environment when it starts up. CML comes pre-packaged with common packages such as Pandas and Scikit-learn, we will need to add the `h2o` library to this file. To ensure reproducability, be sure to specify the version of the h2o library you with to install. The most recent h2o verison can be found **[here](https://pypi.org/project/h2o/)**:
 
 #### Example:
@@ -22,9 +22,18 @@ The [`requirements.txt`](https://github.com/kramer003/AutoML-in-Cloudera-Machine
 ### 2. Model Building
 The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/1_model_building.py) file walks you through the steps of using H2O AutoML.
 
-The Python variable `aml` contains the leaderboard of all models built, and their respective results. In this case the best model is a stacked ensemble.
+The Python variable `aml` contains the leaderboard of all models built, and their respective results. In this case the best model is a Stacked Ensemble.
 
 ```aml.leaderboard```
 ![data](images/leaderboard.png)
 
+At the end of the script, we use `h2o.save_model` to save the state of our Stacked Ensemble model, and use it to generate predictions on new data.
 
+### 2. Real-time Predictions
+The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predicitons.py)deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring
+
+### 3. Batch Predictions.
+The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py)
+
+### 4. Conclusion
+This quick guide helps you get up and running with autoML in CML. If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**
