@@ -1,5 +1,5 @@
 # AutoML in Cloudera Machine Learning
-The following step-by-step instructions will help you get up and running with AuotML in Cloudera Machine Learning (CML). To learn more about CML, view our **[documentation][https://docs.cloudera.com/machine-learning/cloud/index.html]**
+The following step-by-step instructions will help you get up and running with AuotML in Cloudera Machine Learning (CML). To learn more about CML, view our **[documentation](https://docs.cloudera.com/machine-learning/cloud/index.html)**
 
 ### 0. AutoML Overview
 In the following example, we show how CML can be used to build an end-to-end Churn prediction project:
