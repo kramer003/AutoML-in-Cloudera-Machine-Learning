@@ -27,3 +27,12 @@ The Python variable `aml` contains the leaderboard of all models built, and thei
 `aml.leaderboard`
 ![data](images/leaderboard.png)
 
+`
+model_id	auc	logloss	aucpr	mean_per_class_error	rmse	mse
+StackedEnsemble_AllModels_AutoML_20210524_160108	0.789456	0.549799	0.807	0.319887	0.431825	0.186473
+StackedEnsemble_BestOfFamily_AutoML_20210524_160108	0.788442	0.550816	0.805909	0.326525	0.432312	0.186894
+GBM_5_AutoML_20210524_160108	0.78219	0.558353	0.801738	0.319658	0.435512	0.18967
+GBM_2_AutoML_20210524_160108	0.777673	0.562514	0.796364	0.334056	0.437583	0.191479
+GBM_1_AutoML_20210524_160108	0.777294	0.562744	0.799184	0.356261	0.437727	
+`
+
