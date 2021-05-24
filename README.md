@@ -16,7 +16,7 @@ AutoML libraries, such as **[H2O](https://docs.h2o.ai/h2o/latest-stable/h2o-docs
 ### 1. Install Dependencies
 The **[requirements.txt](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/requirements.txt)** file installs dependencies to your CML environment when it starts up. CML comes pre-packaged with common packages such as Pandas and Scikit-learn, we will need to add the `h2o` library to this file. To ensure reproducability, be sure to specify the version of the h2o library you with to install. The most recent h2o verison can be found **[here](https://pypi.org/project/h2o/)**:
 
-The [`requirements.txt`](#https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/requirements.txt)
+The [`requirements.txt`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/requirements.txt)
 #### Example:
 `h2o==3.32.1.3`
 
