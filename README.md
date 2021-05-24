@@ -36,7 +36,7 @@ h2o.save_model(model=aml.leader, path=os.path.realpath('.')+'/models, force=True
 ```
 
 ### 2. Real-time Predictions
-The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py)  deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring
+The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring
 
 ### 3. Batch Predictions.
 The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py)
