@@ -24,7 +24,9 @@ The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Mach
 
 The Python variable `aml` contains the leaderboard of all models built, and their respective results. In this case the best model is a stacked ensemble.
 
-```aml.leaderboard```
+```
+aml.leaderboard
+```
 ![data](images/leaderboard.png)
 
 
