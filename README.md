@@ -28,7 +28,10 @@ The Python variable `aml` contains the leaderboard of all models built, and thei
 ![data](images/leaderboard.png)
 
 At the end of the script, we use `h2o.save_model` to save the state of our Stacked Ensemble model, and use it to generate predictions on new data.
-```h2o.save_model(model=aml.leader, path=os.path.realpath('.')+'/models, force=True)```
+
+```
+h2o.save_model(model=aml.leader, path=os.path.realpath('.')+'/models, force=True)
+```
 
 ### 2. Real-time Predictions
 The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predicitoins.py)deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring
