@@ -20,9 +20,9 @@ The [`requirements.txt`](https://github.com/kramer003/AutoML-in-Cloudera-Machine
 ```h2o==3.32.1.3```
 
 ### 1. Model Building
-The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/1_model_building.py) file walks you through the steps of using H2O AutoML.
+The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/1_model_building.py) file walks you through the steps of using H2O AutoML. It is best to use a **[[session]](https://docs.cloudera.com/machine-learning/cloud/projects/topics/ml-workbench.html)** with CML's built in notebooks to interactively run the code and interpret the output.
 
-The Python variable `aml` contains the leaderboard of all models built, and their respective results. In this case the best model is a Stacked Ensemble.
+The Python variable `auto_ml` contains the leaderboard of all models built, and their respective results. In this case the best model is a Stacked Ensemble.
 
 ```
 auto_ml.leaderboard
