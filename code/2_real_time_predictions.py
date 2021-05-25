@@ -24,5 +24,6 @@ def predict(data):
 	pred_dict = pred.as_data_frame().to_dict()
 	pred_churn = round(pred_dict['Yes'][0],4)
 
+	#Return Prediction
 	return {"Probability of Churn": pred_churn}
 
