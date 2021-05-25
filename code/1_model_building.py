@@ -1,5 +1,8 @@
 #Part 1: Model Building
 
+#Install dependencies
+! pip install -r requirements.txt
+
 #Load libraries
 import os
 import h2o
