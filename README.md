@@ -40,7 +40,7 @@ Note the path of the saved model as you will need it for step #2 and #3. You may
 `'/home/cdsw/models/StackedEnsemble_AllModels_AutoML_20210525_151323'`
 
 ### 2. Real-time Predictions
-The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring.
+The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring. This works best for single record predictions when a response is needed very quickly.
 
 In the following line, replace the default model name with the model you created, in this case `SackedEnsemble_AllModels_AutoML_20210525_151323`
 ```
@@ -84,7 +84,20 @@ Once the model is deployed, we can test the model API and get a real-time resopn
 ![data](images/model_api.png)
 
 ### 3. Batch Predictions.
-The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py) file
+The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py) file can be used to deploy the model in a batch setting. This works best when scoring multiple records on a set frequency, ie hourly, weekly, daily, etc. Typically, we do not need an instant response as the process runs in the back end.
+
+
+In the following line, replace the default model name with the model you created, in this case `SackedEnsemble_AllModels_AutoML_20210525_151323`
+```
+aml_model = h2o.load_model('models/StackedEnsemble_AllModels_AutoML_20210525_151323')
+```
+
+We will click on the **[Jobs](https://docs.cloudera.com/machine-learning/cloud/jobs-pipelines/topics/ml-creating-a-job.html)** feature in order to schedule this script to run on-demand. Use the following configurations.
+* **Name**: Batch Scoring
+* **Script**: 3_batch_predictions.py
+* **Schedule**: Manual
+
+To run the job, go to **Jobs** and under **Actions**, click **Run** for your model.
 
 ### 4. Conclusion
-This quick guide helps you get up and running with H2O AutoML in CML. If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
+This quick guide helps you get up and running with H2O AutoML in CML. To learn more about all of CML's features, check out the **[Product Overview](https://docs.cloudera.com/machine-learning/cloud/product/topics/ml-product-overview.html)**.  If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
