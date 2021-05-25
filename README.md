@@ -20,7 +20,7 @@ The [`requirements.txt`](https://github.com/kramer003/AutoML-in-Cloudera-Machine
 ```h2o==3.32.1.3```
 
 ### 1. Model Building
-The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/1_model_building.py) file walks you through the steps of using H2O AutoML. It is best to use a **[[session]](https://docs.cloudera.com/machine-learning/cloud/projects/topics/ml-workbench.html)** with CML's built in notebooks to interactively run the code and interpret the output.
+The [`1_model_building.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/1_model_building.py) file walks you through the steps of using H2O AutoML. It is best to use a **[session](https://docs.cloudera.com/machine-learning/cloud/projects/topics/ml-workbench.html)** with CML's built in notebooks to interactively run the code and interpret the output.
 
 The Python variable `auto_ml` contains the leaderboard of all models built, and their respective results. In this case the best model is a Stacked Ensemble.
 
@@ -34,6 +34,9 @@ At the end of the script, we use `h2o.save_model` to save the state of our Stack
 ```
 h2o.save_model(model=aml.leader, path=os.path.realpath('.') + '/models', force=True)
 ```
+
+Note the path of the saved model as you will need it for step #2 and #3, unless you would like to use the default model that comes with this example, which would require no changes. Your actual model name may be slightly different.
+`'/home/cdsw/models/StackedEnsemble_AllModels_AutoML_20210525_151323'`
 
 ### 2. Real-time Predictions
 The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring.
