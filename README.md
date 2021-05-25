@@ -44,8 +44,44 @@ The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloude
 
 In the following line, replace the default model name with the model you created, in this case `SackedEnsemble_AllModels_AutoML_20210525_151323`
 ```
-aml_model = h2o.load_model('StackedEnsemble_AllModels_AutoML_20210525_151323')
+aml_model = h2o.load_model('models/StackedEnsemble_AllModels_AutoML_20210525_151323')
 ```
+
+Next, we will click on the **[Models](https://docs.cloudera.com/machine-learning/cloud/models/topics/ml-creating-and-deploying-a-model.html)** feature to generate real-time predictions via REST API. To deploy the model, click on *New Model* with the following configuration:
+* **Name**: AutoML Model API Endpoint
+* **Description**: Using H2O to predict churn
+* **File**: 2_real_time_predictions.py
+* **Function**: predict
+* **Input**:
+
+```
+{
+	"customerID": "3668-QPYBK",
+	 "gender": "Male",
+	 "SeniorCitizen": 0,
+	 "Partner": "No",
+	 "Dependents": "No",
+	 "tenure": 2,
+	 "PhoneService": "Yes",
+	 "MultipleLines": "No",
+	 "InternetService": "DSL",
+	 "OnlineSecurity": "Yes",
+	 "OnlineBackup": "Yes",
+	 "DeviceProtection": "No",
+	 "TechSupport": "No",
+	 "StreamingTV": "No",
+	 "StreamingMovies": "No",
+	 "Contract": "Month-to-month",
+	 "PaperlessBilling": "Yes",
+	 "PaymentMethod": "Mailed check",
+	 "MonthlyCharges": 53.85,
+	 "TotalCharges": 108.15,
+	 "Churn": "Yes"
+}
+```
+
+Once the model is deployed, we can test the model API and get a real-time resopnse. We can now integrate this endpoint into any system that speaks REST.
+![data](images/model_api.png)
 
 ### 3. Batch Predictions.
 The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py) file
