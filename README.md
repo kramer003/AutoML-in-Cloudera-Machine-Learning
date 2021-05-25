@@ -101,4 +101,4 @@ To run the job, go to **Jobs** and under **Actions**, click **Run** for your mod
 ![data](images/batch_score.png)
 
 ### 4. Conclusion
-This quick guide helps you get up and running with H2O AutoML in CML. To learn more about all of CML's features, check out the **[Product Overview](https://docs.cloudera.com/machine-learning/cloud/product/topics/ml-product-overview.html)**.  If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
+This quick guide helps you get up and running with H2O AutoML in CML. To learn more about all of CML's features, check out the **[Product Overview](https://docs.cloudera.com/machine-learning/cloud/product/topics/ml-product-overview.html)**.  If you have quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
