@@ -1,7 +1,7 @@
 #Part 2: Real Time Predictions
 
-#Install Dependencies
-! pip install -r requirements.txt
+#Install dependencies
+!pip3 install -r requirements.txt
 
 #Load libraries
 import h2o
@@ -22,6 +22,6 @@ def predict(data):
 	#Predictions
 	pred = auto_model.predict(df_h2o)
 	pred_dict = pred.as_data_frame().to_dict()
-	pred_churn = round(pred_dict['p1'][0],4)
+	pred_churn = round(pred_dict['Yes'][0],4)
 
 	return {"Probability of Churn": pred_churn}

@@ -1,5 +1,8 @@
 #Part 3: Batch Predictions
 
+#Install dependencies
+!pip3 install -r requirements.txt
+
 #Load libraries
 import h2o
 import pandas as pd
