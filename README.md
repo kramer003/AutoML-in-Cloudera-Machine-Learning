@@ -97,7 +97,7 @@ We will click on the **[Jobs](https://docs.cloudera.com/machine-learning/cloud/j
 * **Script**: 3_batch_predictions.py
 * **Schedule**: Manual
 
-To run the job, go to **Jobs** and under **Actions**, click **Run** for your model. You will be able to inspect youro run and see it was sucessful.
+To run the job, go to **Jobs** and under **Actions**, click **Run** for your model. You will be able to inspect your run and see it was sucessful.
 ![data](images/batch_score.png)
 
 ### 4. Conclusion
