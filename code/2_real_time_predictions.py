@@ -25,3 +25,4 @@ def predict(data):
 	pred_churn = round(pred_dict['Yes'][0],4)
 
 	return {"Probability of Churn": pred_churn}
+
