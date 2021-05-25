@@ -35,11 +35,17 @@ At the end of the script, we use `h2o.save_model` to save the state of our Stack
 h2o.save_model(model=aml.leader, path=os.path.realpath('.') + '/models', force=True)
 ```
 
-Note the path of the saved model as you will need it for step #2 and #3, unless you would like to use the default model that comes with this example, which would require no changes. Your actual model name may be slightly different.
+Note the path of the saved model as you will need it for step #2 and #3. You may use the default model that comes with this example, which would require no code changes. Your actual model name may be slightly different.
+
 `'/home/cdsw/models/StackedEnsemble_AllModels_AutoML_20210525_151323'`
 
 ### 2. Real-time Predictions
 The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring.
+
+In the following line, replace the default model name with the model you created, in this case `SackedEnsemble_AllModels_AutoML_20210525_151323`
+```
+aml_model = h2o.load_model('StackedEnsemble_AllModels_AutoML_20210525_151323')
+```
 
 ### 3. Batch Predictions.
 The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py) file
