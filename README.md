@@ -97,7 +97,8 @@ We will click on the **[Jobs](https://docs.cloudera.com/machine-learning/cloud/j
 * **Script**: 3_batch_predictions.py
 * **Schedule**: Manual
 
-To run the job, go to **Jobs** and under **Actions**, click **Run** for your model.
+To run the job, go to **Jobs** and under **Actions**, click **Run** for your model. You will be able to inspect youro run and see it was sucessful.
+![data](images/batch_score.png)
 
 ### 4. Conclusion
 This quick guide helps you get up and running with H2O AutoML in CML. To learn more about all of CML's features, check out the **[Product Overview](https://docs.cloudera.com/machine-learning/cloud/product/topics/ml-product-overview.html)**.  If you have additional quesitons, don't hesistate to reach us on the **[Cloudera Community](https://community.cloudera.com/)**.
