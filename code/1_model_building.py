@@ -41,6 +41,10 @@ leaderboard.head(rows=5)
 #Inspect leader model
 auto_ml.leader
 
+#The Confusion Matrix can be found in the auto_ml.leader output
+#You can also generate the matrix with the following command:
+auto_ml.leader.confusion_matrix()
+
 #Generate predictions on test data using best model
 #Can also use auto_ml.leader.predict()
 preds = auto_ml.predict(test)
