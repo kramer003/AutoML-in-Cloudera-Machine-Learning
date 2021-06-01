@@ -29,7 +29,7 @@ auto_ml.leaderboard
 ```
 ![data](images/leaderboard.png)
 
-`auto_ml` also contains more detailed information on the best model. Among the model details returned is the Confusion Matrix. If you want just the confusion matrix, you can run `auto_ml.leader.confusion_matrix`
+`auto_ml` also contains more detailed information on the best model. Among the model details returned is the Confusion Matrix. If you just want the confusion matrix, you can run `auto_ml.leader.confusion_matrix`
 
 ```
 auto_ml.leader
@@ -47,7 +47,7 @@ Note the path of the saved model as you will need it for step #2 and #3. You may
 `'/home/cdsw/models/StackedEnsemble_AllModels_AutoML_20210525_151323'`
 
 ### 2. Real-time Predictions
-The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API Endpoint for real-time scoring. This works best for single record predictions when a response is needed very quickly.
+The [`2_real_time_predicitons.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/2_real_time_predictions.py) file deploys our Stacked Ensemble as a REST API endpoint for real-time scoring. This works best for single record predictions when a response is needed very quickly.
 
 In the following line, replace the default model name with the model you created, in this case `SackedEnsemble_AllModels_AutoML_20210525_151323`
 ```
