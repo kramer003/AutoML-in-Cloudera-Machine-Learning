@@ -90,7 +90,7 @@ Next, we will click on the **[Models](https://docs.cloudera.com/machine-learning
 Once the model is deployed, we can test the model API and get a real-time resopnse. We can now integrate this endpoint into any system that speaks REST.
 ![data](images/model_api.png)
 
-### 3. Batch Predictions.
+### 3. Batch Predictions
 The [`3_batch_predictions.py`](https://github.com/kramer003/AutoML-in-Cloudera-Machine-Learning/blob/main/code/3_batch_predictions.py) file can be used to deploy the model in a batch setting. This works best when scoring multiple records on a set frequency, ie hourly, weekly, daily, etc. Typically, we do not need an instant response as the process runs in the back end.
 
 
