@@ -29,14 +29,14 @@ auto_ml.leaderboard
 ```
 ![data](images/leaderboard.png)
 
-`auto_ml` also contains more detailed information on the best model. Among the model details returned is the Confusion Matrix. If you just want the confusion matrix, you can run `auto_ml.leader.confusion_matrix`
+`auto_ml` also contains more detailed information on the best model. Among the model details returned is the Confusion Matrix. If you just want the confusion matrix, you can run `auto_ml.leader.confusion_matrix`.
 
 ```
 auto_ml.leader
 ```
 ![data](images/confusion_matrix.png)
 
-At the end of the script, we use `h2o.save_model` to save the state of our Stacked Ensemble model, and use it to generate predictions on new data.
+At the end of the script, we use `h2o.save_model` to save the state of our Stacked Ensemble Model, and use it to generate predictions on new data.
 
 ```
 h2o.save_model(model=aml.leader, path=os.path.realpath('.') + '/models', force=True)
